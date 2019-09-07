@@ -1,0 +1,17 @@
+name: AsteamosCore
+version: 1.0.0
+main: dehys.asteamoscore.AsteamosCore
+api-version: 1.13
+authors: [Dehys]
+description: Core plugin for asteamos smp
+depend: [Vault]
+commands:
+  balance:
+    description: Displays balance of a player.
+    usage: /<command> , /<command> <player>
+    aliases: [bal, balance, money, coins, gold]
+
+  pay:
+    description: Pays an amout to a specified player.
+    usage: /<command> <player>
+    aliases: [pay, payment]
