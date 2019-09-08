@@ -12,10 +12,10 @@ public class DBConnector {
         if (!isConnected()) {
             try
             {
-                String host = "localhost";
-                String database = "PrivateSmp";
-                String username = "PrivateSmp";
-                String password = "testing123";
+                String host = "";
+                String database = "";
+                String username = "";
+                String password = "";
                 con = DriverManager.getConnection("jdbc:mysql://" + host + ":3306/" + database + "?autoReconnect=true", username, password);
                 return true;
             }
