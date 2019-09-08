@@ -55,11 +55,14 @@ public final class AsteamosCore extends JavaPlugin {
     private void initializeClasses(){
         getInstance = this;
         economyImplementer = new EconomyImplementer();
+        vaultHook = new VaultHook();
+        entryManager = new EntryManager();
     }
 
     private void setupPlugin(){
-        initializeDatabase();
         initializeClasses();
+        initializeDatabase();
+
         vaultHook.hook();
 
         Objects.requireNonNull(this.getCommand("balance")).setExecutor(new EconomyCommands());
