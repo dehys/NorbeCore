@@ -1,10 +1,11 @@
 package dehys.asteamoscore;
 
-import dehys.asteamoscore.chat.ChatManager;
+import dehys.asteamoscore.events.chat.ChatFormat;
 import dehys.asteamoscore.db.DBConnector;
 import dehys.asteamoscore.economy.EconomyCommands;
 import dehys.asteamoscore.economy.EconomyImplementer;
 import dehys.asteamoscore.economy.VaultHook;
+import dehys.asteamoscore.events.EventManager;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -65,10 +66,10 @@ public final class AsteamosCore extends JavaPlugin {
 
         vaultHook.hook();
 
-        Objects.requireNonNull(this.getCommand("balance")).setExecutor(new EconomyCommands());
+        Objects.requireNonNull(this.getCommand("coins")).setExecutor(new EconomyCommands());
         Objects.requireNonNull(this.getCommand("pay")).setExecutor(new EconomyCommands());
 
-        Bukkit.getServer().getPluginManager().registerEvents(new ChatManager(), this);
+        Bukkit.getServer().getPluginManager().registerEvents(new EventManager(), this);
     }
 
     @Override

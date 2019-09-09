@@ -5,12 +5,28 @@
       <artifact name="AsteamosCore" />
     </artifacts-to-build>
   </component>
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/src/dehys/asteamoscore/economy/EconomyCommands.java" line="43" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="3f4c0645-75fe-4c7b-a52f-23dbc682d059" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dehys/asteamoscore/events/EventManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/dehys/asteamoscore/events/miscellaneous/RocketBoost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/AsteamosCore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/AsteamosCore.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/AsteamosCore/AsteamosCore.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AsteamosCore/dehys/asteamoscore/AsteamosCore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AsteamosCore/dehys/asteamoscore/AsteamosCore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AsteamosCore/dehys/asteamoscore/EntryManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AsteamosCore/dehys/asteamoscore/EntryManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AsteamosCore/dehys/asteamoscore/chat/ChatManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AsteamosCore/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AsteamosCore/plugin.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dehys/asteamoscore/AsteamosCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dehys/asteamoscore/AsteamosCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dehys/asteamoscore/EntryManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dehys/asteamoscore/EntryManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dehys/asteamoscore/chat/ChatManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dehys/asteamoscore/events/chat/ChatFormat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dehys/asteamoscore/db/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dehys/asteamoscore/db/DBConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dehys/asteamoscore/economy/EconomyCommands.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dehys/asteamoscore/economy/EconomyCommands.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dehys/asteamoscore/exceptions/PlayerNotFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dehys/asteamoscore/exceptions/PlayerNotFound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/plugin.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,16 +36,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DefaultGradleProjectSettings">
-    <option name="testRunner" value="GRADLE" />
-    <option name="delegatedBuild" value="true" />
+    <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/AsteamosCore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="583">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="363">
+              <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1010#1011#0" expanded="true" />
@@ -39,14 +54,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/economy/VaultHook.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/economy/EconomyCommands.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="74" selection-start-line="15" selection-start-column="74" selection-end-line="15" selection-end-column="74" />
+            <state relative-caret-position="358">
+              <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/exceptions/PlayerNotFound.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="5" column="73" lean-forward="true" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
             </state>
           </provider>
         </entry>
@@ -61,27 +85,38 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>return</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/plugin.yml" />
-        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/EntryManager.java" />
         <option value="$PROJECT_DIR$/src/dehys/asteamoscore/chat/ChatManager.java" />
-        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/db/DBConnector.java" />
-        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/economy/EconomyCommands.java" />
         <option value="$PROJECT_DIR$/src/dehys/asteamoscore/economy/EconomyImplementer.java" />
         <option value="$PROJECT_DIR$/src/dehys/asteamoscore/economy/VaultHook.java" />
-        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/exceptions/PlayerNotFound.java" />
+        <option value="$PROJECT_DIR$/src/plugin.yml" />
+        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/db/DBConnector.java" />
+        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/EntryManager.java" />
+        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/miscellaneous/RocketBoost.java" />
+        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/miscellaneous/MiscellaneousManager.java" />
+        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/events/MiscellaneousManager.java" />
+        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/events/chat/ChatFormat.java" />
+        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/events/EventManager.java" />
         <option value="$PROJECT_DIR$/src/dehys/asteamoscore/AsteamosCore.java" />
+        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/events/miscellaneous/RocketBoost.java" />
+        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/exceptions/PlayerNotFound.java" />
+        <option value="$PROJECT_DIR$/src/dehys/asteamoscore/economy/EconomyCommands.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="487" />
-    <option name="y" value="24" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="537" />
+    <option name="y" value="68" />
     <option name="width" value="1096" />
     <option name="height" value="1000" />
   </component>
@@ -139,14 +174,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="dehys" type="462c0819:PsiDirectoryNode" />
               <item name="asteamoscore" type="462c0819:PsiDirectoryNode" />
-              <item name="chat" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="AsteamosCore" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AsteamosCore" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="dehys" type="462c0819:PsiDirectoryNode" />
-              <item name="asteamoscore" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -156,6 +183,32 @@
               <item name="dehys" type="462c0819:PsiDirectoryNode" />
               <item name="asteamoscore" type="462c0819:PsiDirectoryNode" />
               <item name="economy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AsteamosCore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AsteamosCore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dehys" type="462c0819:PsiDirectoryNode" />
+              <item name="asteamoscore" type="462c0819:PsiDirectoryNode" />
+              <item name="events" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AsteamosCore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AsteamosCore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dehys" type="462c0819:PsiDirectoryNode" />
+              <item name="asteamoscore" type="462c0819:PsiDirectoryNode" />
+              <item name="events" type="462c0819:PsiDirectoryNode" />
+              <item name="chat" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="AsteamosCore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="AsteamosCore" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="dehys" type="462c0819:PsiDirectoryNode" />
+              <item name="asteamoscore" type="462c0819:PsiDirectoryNode" />
+              <item name="events" type="462c0819:PsiDirectoryNode" />
+              <item name="miscellaneous" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="AsteamosCore" type="b2602c69:ProjectViewProjectNode" />
@@ -177,7 +230,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/TestServer/plugins" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -208,18 +261,18 @@
       <option name="presentableId" value="Default" />
       <updated>1567824045033</updated>
       <workItem from="1567824049048" duration="789000" />
-      <workItem from="1567858372450" duration="3714000" />
+      <workItem from="1567858372450" duration="8483000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4503000" />
+    <option name="totallyTimeSpent" value="9272000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14574468" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14574468" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -236,8 +289,8 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.5741729" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32977587" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.075773746" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -255,36 +308,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/EntryManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2809">
-          <caret line="129" column="1" selection-start-line="129" selection-start-column="1" selection-end-line="129" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/chat/ChatManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/db/DBConnector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/economy/EconomyImplementer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1687">
@@ -292,30 +315,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/exceptions/PlayerNotFound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/economy/EconomyCommands.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1474">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -329,14 +328,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/db/DBConnector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/EntryManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-408">
+          <caret line="47" column="9" lean-forward="true" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/plugin.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/events/miscellaneous/RocketBoost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="18" column="62" lean-forward="true" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/events/EventManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#295#296#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/events/chat/ChatFormat.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/exceptions/PlayerNotFound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="73" lean-forward="true" selection-start-line="5" selection-start-column="73" selection-end-line="5" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/AsteamosCore.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="583">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+        <state relative-caret-position="363">
+          <caret line="60" column="5" lean-forward="true" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1010#1011#0" expanded="true" />
             <element signature="e#1039#1040#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/dehys/asteamoscore/economy/EconomyCommands.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="39" column="13" lean-forward="true" selection-start-line="39" selection-start-column="13" selection-end-line="39" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

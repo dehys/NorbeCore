@@ -4,11 +4,14 @@ import dehys.asteamoscore.AsteamosCore;
 import dehys.asteamoscore.exceptions.PlayerNotFound;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.OfflinePlayer;
 import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+
+import java.util.UUID;
 
 public class EconomyCommands implements CommandExecutor {
 
@@ -16,7 +19,7 @@ public class EconomyCommands implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(!(sender instanceof Player)) return false;
+        if(!(sender instanceof Player)) return true;
         Player player = (Player) sender;
 
         if(!plugin.getPlayerBank().containsKey(player.getUniqueId())) {
@@ -25,18 +28,20 @@ public class EconomyCommands implements CommandExecutor {
 
         //BALANCE COMMAND
         if(command.getName().equalsIgnoreCase("balance")){
-            Player bankPlayer = player;
+            OfflinePlayer bankPlayer = player;
+            String outputMessage = ChatColor.GOLD+"Balance: ";
             if(args.length >= 1){
-                bankPlayer = Bukkit.getPlayer(args[0]);
-                if (bankPlayer == null){
-                    player.sendMessage(PlayerNotFound.message);
-                    return false;
+                bankPlayer = Bukkit.getOfflinePlayer(args[0]);
+                if (!(plugin.getPlayerBank().containsKey(bankPlayer.getUniqueId()))){
+                    player.sendMessage(PlayerNotFound.FAUL_MESSAGE);
+                    return true;
                 }
+                outputMessage = ChatColor.GRAY+bankPlayer.getName()+"'s "+ChatColor.GOLD+"Balance: ";
             }
 
             try{
                 int balance = (int) plugin.economyImplementer.getBalance(bankPlayer);
-                sender.sendMessage(ChatColor.GOLD+"Balance: "+balance);
+                player.sendMessage(outputMessage+ChatColor.YELLOW+balance);
             }catch(Exception ex){
                 ex.printStackTrace();
             }
@@ -49,7 +54,7 @@ public class EconomyCommands implements CommandExecutor {
                     Player target = Bukkit.getPlayer(args[0]);
                     int paymentAmount = Integer.parseInt(args[1]);
 
-                    if(target == sender) return false;
+                    if(target == sender) return true;
 
                     plugin.economyImplementer.pay(player, target, paymentAmount);
 
@@ -62,6 +67,6 @@ public class EconomyCommands implements CommandExecutor {
             }
         }
 
-        return false;
+        return true;
     }
 }

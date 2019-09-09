@@ -55,7 +55,7 @@ public class EntryManager {
             int balance = plugin.getPlayerBank().get(key).intValue();
             try
             {
-                PreparedStatement ps2 = DBConnector.con.prepareCall("INSERT INTO chestsecure (uuid, balance) VALUES (?,?)");
+                PreparedStatement ps2 = DBConnector.con.prepareCall("INSERT INTO economy (uuid, balance) VALUES (?,?)");
                 ps2.setString(1, key.toString());
                 ps2.setString(2, balance+"");
                 ps2.executeUpdate();

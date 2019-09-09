@@ -1,16 +1,11 @@
-package dehys.asteamoscore.chat;
+package dehys.asteamoscore.events.chat;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
-import org.bukkit.event.EventHandler;
-import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
-public class ChatManager implements Listener {
-
-    @EventHandler
-    public void onPlayerChat(AsyncPlayerChatEvent e) {
-
+public class ChatFormat {
+    public ChatFormat(AsyncPlayerChatEvent e){
         String eventMessage = e.getMessage();
         Player eventPlayer = e.getPlayer();
 
@@ -19,5 +14,4 @@ public class ChatManager implements Listener {
         format = format.replace("<message>", "%2$s");
         e.setFormat(format);
     }
-
 }

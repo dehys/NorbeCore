@@ -9,9 +9,9 @@ commands:
   balance:
     description: Displays balance of a player.
     usage: /<command> , /<command> <player>
-    aliases: [bal, balance, money, coins, gold]
+    aliases: [balance, coins, gold]
 
   pay:
     description: Pays an amout to a specified player.
     usage: /<command> <player>
-    aliases: [pay, payment]
+    aliases: [pay]
