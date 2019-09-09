@@ -1,2 +1,4 @@
 TODO:
-- Validate target player to have an balance inside playerBank map
+- Finish up GoldTrader module
+- Finish up ChestSecure module
+- Clean everything.
