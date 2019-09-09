@@ -33,7 +33,7 @@ public class EconomyCommands implements CommandExecutor {
             if(args.length >= 1){
                 bankPlayer = Bukkit.getOfflinePlayer(args[0]);
                 if (!(plugin.getPlayerBank().containsKey(bankPlayer.getUniqueId()))){
-                    player.sendMessage(PlayerNotFound.FAUL_MESSAGE);
+                    player.sendMessage(PlayerNotFound.FAULT_MESSAGE);
                     return true;
                 }
                 outputMessage = ChatColor.GRAY+bankPlayer.getName()+"'s "+ChatColor.GOLD+"Balance: ";
