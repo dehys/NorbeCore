@@ -1,11 +1,11 @@
 package dehys.asteamoscore;
 
-import dehys.asteamoscore.events.chat.ChatFormat;
 import dehys.asteamoscore.db.DBConnector;
-import dehys.asteamoscore.economy.EconomyCommands;
-import dehys.asteamoscore.economy.EconomyImplementer;
-import dehys.asteamoscore.economy.VaultHook;
+import dehys.asteamoscore.modules.chestsecure.ChestSecureHandler;
+import dehys.asteamoscore.modules.economy.EconomyCommands;
+import dehys.asteamoscore.modules.economy.EconomyHandler;
 import dehys.asteamoscore.events.EventManager;
+import dehys.asteamoscore.modules.goldtrader.GoldTraderHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -18,7 +18,10 @@ import java.util.UUID;
 public final class AsteamosCore extends JavaPlugin {
 
     public static AsteamosCore getInstance;
-    public EconomyImplementer economyImplementer;
+
+    public ChestSecureHandler chestSecureHandler;
+    public EconomyHandler economyHandler;
+    public GoldTraderHandler goldTraderHandler;
 
     private HashMap<UUID, Double> playerBank = new HashMap<>();
     public HashMap<UUID, Double> getPlayerBank() { return playerBank;}
@@ -26,7 +29,6 @@ public final class AsteamosCore extends JavaPlugin {
     private HashMap<Location, UUID> securedChestLocations = new HashMap<>();
     public HashMap<Location, UUID> getSecuredChestLocations(){ return securedChestLocations;}
 
-    private VaultHook vaultHook;
     private EntryManager entryManager;
 
     @Override
@@ -55,16 +57,18 @@ public final class AsteamosCore extends JavaPlugin {
 
     private void initializeClasses(){
         getInstance = this;
-        economyImplementer = new EconomyImplementer();
-        vaultHook = new VaultHook();
+
         entryManager = new EntryManager();
+
+        //MODULES
+        chestSecureHandler = new ChestSecureHandler();
+        economyHandler = new EconomyHandler();
+        goldTraderHandler = new GoldTraderHandler();
     }
 
     private void setupPlugin(){
         initializeClasses();
         initializeDatabase();
-
-        vaultHook.hook();
 
         Objects.requireNonNull(this.getCommand("coins")).setExecutor(new EconomyCommands());
         Objects.requireNonNull(this.getCommand("pay")).setExecutor(new EconomyCommands());
@@ -76,6 +80,5 @@ public final class AsteamosCore extends JavaPlugin {
     public void onDisable() {
         entryManager.saveEconomy();
         //entryManager.saveChestSecure();
-        vaultHook.unhook();
     }
 }

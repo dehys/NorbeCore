@@ -1,4 +1,4 @@
-package dehys.asteamoscore.economy;
+package dehys.asteamoscore.modules.economy;
 
 import dehys.asteamoscore.AsteamosCore;
 import dehys.asteamoscore.exceptions.PlayerNotFound;
@@ -10,8 +10,6 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-
-import java.util.UUID;
 
 public class EconomyCommands implements CommandExecutor {
 
@@ -40,7 +38,7 @@ public class EconomyCommands implements CommandExecutor {
             }
 
             try{
-                int balance = (int) plugin.economyImplementer.getBalance(bankPlayer);
+                int balance = (int) plugin.economyHandler.getBalance(bankPlayer);
                 player.sendMessage(outputMessage+ChatColor.YELLOW+balance);
             }catch(Exception ex){
                 ex.printStackTrace();
@@ -56,7 +54,7 @@ public class EconomyCommands implements CommandExecutor {
 
                     if(target == sender) return true;
 
-                    plugin.economyImplementer.pay(player, target, paymentAmount);
+                    plugin.economyHandler.pay(player, target, paymentAmount);
 
                     sender.sendMessage(ChatColor.GREEN+"Sent "+paymentAmount+ " coins to "+target.getDisplayName());
                     target.sendMessage(ChatColor.GOLD+"+ "+paymentAmount+" coins from "+player.getDisplayName());
