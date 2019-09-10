@@ -35,7 +35,7 @@ public class GoldTraderCommands implements CommandExecutor, Listener {
 
                     Player player = (Player) sender;
                     Location location = player.getLocation();
-                    plugin.goldTraderHandler.setVillagerLocation(location);
+                    plugin.getHandlers.getGoldTraderHandler().setVillagerLocation(location);
                     return true;
                 }
 
@@ -45,19 +45,19 @@ public class GoldTraderCommands implements CommandExecutor, Listener {
                         sender.sendMessage(OversizedString.FAULT_MESSAGE);
                         return true;
                     }
-                    plugin.goldTraderHandler.setVillagerName(name);
+                    plugin.getHandlers.getGoldTraderHandler().setVillagerName(name);
                     return true;
                 }
 
                 if(args[0].equalsIgnoreCase("refresh")){
-                    plugin.goldTraderHandler.removeVillager();
-                    plugin.goldTraderHandler.spawnVillager();
+                    plugin.getHandlers.getGoldTraderHandler().removeVillager();
+                    plugin.getHandlers.getGoldTraderHandler().spawnVillager();
                     return true;
                 }
 
                 if(args[0].equalsIgnoreCase("remove")){
-                    plugin.goldTraderHandler.removeVillager();
-                    plugin.goldTraderHandler.removed = true;
+                    plugin.getHandlers.getGoldTraderHandler().removeVillager();
+                    plugin.getHandlers.getGoldTraderHandler().removed = true;
                     return true;
                 }
 

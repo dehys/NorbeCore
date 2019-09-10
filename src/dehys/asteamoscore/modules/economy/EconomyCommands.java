@@ -38,7 +38,7 @@ public class EconomyCommands implements CommandExecutor {
             }
 
             try{
-                int balance = (int) plugin.economyHandler.getBalance(bankPlayer);
+                int balance = (int) plugin.getHandlers.getEconomyHandler().getBalance(bankPlayer);
                 player.sendMessage(outputMessage+ChatColor.YELLOW+balance);
             }catch(Exception ex){
                 ex.printStackTrace();
@@ -54,7 +54,7 @@ public class EconomyCommands implements CommandExecutor {
 
                     if(target == sender) return true;
 
-                    plugin.economyHandler.pay(player, target, paymentAmount);
+                    plugin.getHandlers.getEconomyHandler().pay(player, target, paymentAmount);
 
                     sender.sendMessage(ChatColor.GREEN+"Sent "+paymentAmount+ " coins to "+target.getDisplayName());
                     target.sendMessage(ChatColor.GOLD+"+ "+paymentAmount+" coins from "+player.getDisplayName());

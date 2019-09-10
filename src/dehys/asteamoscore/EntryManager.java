@@ -1,6 +1,6 @@
 package dehys.asteamoscore;
 
-import dehys.asteamoscore.db.DBConnector;
+import dehys.asteamoscore.modules.db.DataBaseHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.World;
@@ -17,7 +17,7 @@ public class EntryManager {
     public void collectEconomy(){
         try{
             PreparedStatement ps = null;
-            ps = DBConnector.con.prepareStatement("SELECT * FROM economy");
+            ps = DataBaseHandler.con.prepareStatement("SELECT * FROM economy");
             ResultSet rs = ps.executeQuery();
             int i = 0;
             while (rs.next())
@@ -43,7 +43,7 @@ public class EntryManager {
         PreparedStatement ps = null;
         try
         {
-            ps = DBConnector.con.prepareStatement("DELETE FROM economy");
+            ps = DataBaseHandler.con.prepareStatement("DELETE FROM economy");
             ps.executeUpdate();
         }
         catch (SQLException e)
@@ -55,7 +55,7 @@ public class EntryManager {
             int balance = plugin.getPlayerBank().get(key).intValue();
             try
             {
-                PreparedStatement ps2 = DBConnector.con.prepareCall("INSERT INTO economy (uuid, balance) VALUES (?,?)");
+                PreparedStatement ps2 = DataBaseHandler.con.prepareCall("INSERT INTO economy (uuid, balance) VALUES (?,?)");
                 ps2.setString(1, key.toString());
                 ps2.setString(2, balance+"");
                 ps2.executeUpdate();
@@ -71,7 +71,7 @@ public class EntryManager {
     public void collectChestSecure(){
         try{
             PreparedStatement ps = null;
-            ps = DBConnector.con.prepareStatement("SELECT * FROM chestsecure");
+            ps = DataBaseHandler.con.prepareStatement("SELECT * FROM chestsecure");
             ResultSet rs = ps.executeQuery();
             int i = 0;
             while (rs.next())
@@ -102,7 +102,7 @@ public class EntryManager {
         PreparedStatement ps = null;
         try
         {
-            ps = DBConnector.con.prepareStatement("DELETE FROM chestsecure");
+            ps = DataBaseHandler.con.prepareStatement("DELETE FROM chestsecure");
             ps.executeUpdate();
         }
         catch (SQLException e)
@@ -115,7 +115,7 @@ public class EntryManager {
             String uuid = ((UUID)plugin.getSecuredChestLocations().get(key)).toString();
             try
             {
-                PreparedStatement ps2 = DBConnector.con.prepareCall("INSERT INTO chestsecure (uuid, location) VALUES (?,?)");
+                PreparedStatement ps2 = DataBaseHandler.con.prepareCall("INSERT INTO chestsecure (uuid, location) VALUES (?,?)");
                 ps2.setString(1, uuid);
                 ps2.setString(2, unparsedkey);
                 ps2.executeUpdate();

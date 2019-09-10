@@ -1,21 +1,22 @@
-package dehys.asteamoscore.db;
+package dehys.asteamoscore.modules.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBConnector {
+public class DataBaseHandler {
     public static Connection con;
+
+    static String host = "";
+    static String database = "";
+    static String username = "";
+    static String password = "";
 
     public static boolean connect()
     {
         if (!isConnected()) {
             try
             {
-                String host = "localhost";
-                String database = "PrivateSmp";
-                String username = "PrivateSmp";
-                String password = "testing123";
                 con = DriverManager.getConnection("jdbc:mysql://" + host + ":3306/" + database + "?autoReconnect=true", username, password);
                 return true;
             }

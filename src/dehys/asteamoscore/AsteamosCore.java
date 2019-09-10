@@ -1,10 +1,10 @@
 package dehys.asteamoscore;
 
-import dehys.asteamoscore.db.DBConnector;
 import dehys.asteamoscore.modules.chestsecure.ChestSecureHandler;
+import dehys.asteamoscore.modules.db.DataBaseHandler;
 import dehys.asteamoscore.modules.economy.EconomyCommands;
-import dehys.asteamoscore.modules.economy.EconomyHandler;
 import dehys.asteamoscore.events.EventManager;
+import dehys.asteamoscore.modules.economy.EconomyHandler;
 import dehys.asteamoscore.modules.goldtrader.GoldTraderHandler;
 import org.bukkit.*;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -18,10 +18,7 @@ import java.util.UUID;
 public final class AsteamosCore extends JavaPlugin {
 
     public static AsteamosCore getInstance;
-
-    public ChestSecureHandler chestSecureHandler;
-    public EconomyHandler economyHandler;
-    public GoldTraderHandler goldTraderHandler;
+    public Handlers getHandlers;
 
     private HashMap<UUID, Double> playerBank = new HashMap<>();
     public HashMap<UUID, Double> getPlayerBank() { return playerBank;}
@@ -31,14 +28,30 @@ public final class AsteamosCore extends JavaPlugin {
 
     private EntryManager entryManager;
 
+    ChestSecureHandler chestSecureHandler;
+    DataBaseHandler dataBaseHandler;
+    EconomyHandler economyHandler;
+    GoldTraderHandler goldTraderHandler;
+
     @Override
     public void onEnable() {
         setupPlugin();
         setupServer();
     }
 
+    private void initializeClasses(){
+        getInstance = this;
+        getHandlers = new Handlers();
+
+        entryManager = new EntryManager();
+        chestSecureHandler = new ChestSecureHandler();
+        dataBaseHandler = new DataBaseHandler();
+        economyHandler = new EconomyHandler();
+        goldTraderHandler = new GoldTraderHandler();
+    }
+
     private void initializeDatabase(){
-        if (!DBConnector.connect())
+        if (!DataBaseHandler.connect())
         {
             System.out.println("DATABASE CONNECTION NOT SUCCESSFUL!");
             getServer().getPluginManager().disablePlugin(this);
@@ -54,17 +67,6 @@ public final class AsteamosCore extends JavaPlugin {
         {
             ex.printStackTrace();
         }
-    }
-
-    private void initializeClasses(){
-        getInstance = this;
-
-        entryManager = new EntryManager();
-
-        //MODULES
-        chestSecureHandler = new ChestSecureHandler();
-        economyHandler = new EconomyHandler();
-        goldTraderHandler = new GoldTraderHandler();
     }
 
     private void setupPlugin(){
